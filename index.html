@@ -3,19 +3,102 @@
 <head>
     <title>League of Legends API</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="api.css">
 </head>
 
 <body>
-    <h1>League of Legends API</h1>
+    <h1 id="lolApi">League of Legends API</h1>
+    <div id="blueTeamStats">
+        <h2 id="blueTeamHeader">Blue Team Stats</h2>
+        <p>Gold:<strong id="blueTeamGold"> 0 </strong></p>
+        <p>Kills:<strong id="blueTeamKills"> 0 </strong></p>
+        <p>Dragons:<strong id="blueTeamDragons"> 0 </strong></p>
+        <p>Towers:<strong id="blueTeamTowers"> 0 </strong></p>
+        <p>Inhibitors:<strong id="blueTeamInhib"> 0 </strong></p>
+        <p>Barons:<strong id="blueTeamBarons"> 0 </strong></p>
+        <br><br>
+        <h3>Players Stats:</h3>
+        <p>Top Laner - Gold: <strong id="blueTopLanerGold"> 0 </strong> 
+            - Kills: <strong id="blueTopLanerKills"> 0 </strong>
+            - Deaths: <strong id="blueTopLanerDeaths"> 0 </strong> 
+            - Assists: <strong id="blueTopLanerAssists"> 0 </strong>
+            - Farm: <strong id="blueTopLanerFarm"> 0 </strong>
+        </p>
+        <p>Jungle - Gold: <strong id="blueJungleGold"> 0 </strong> 
+            - Kills: <strong id="blueJungleKills"> 0 </strong>
+            - Deaths: <strong id="blueJungleDeaths"> 0 </strong> 
+            - Assists: <strong id="blueJungleAssists"> 0 </strong>
+            - Farm: <strong id="blueJungleFarm"> 0 </strong>
+        </p>
+        <p>Mid Laner - Gold: <strong id="blueMidLanerGold"> 0 </strong> 
+            - Kills: <strong id="blueMidLanerKills"> 0 </strong>
+            - Deaths: <strong id="blueMidLanerDeaths"> 0 </strong> 
+            - Assists: <strong id="blueMidLanerAssists"> 0 </strong>
+            - Farm: <strong id="blueMidLanerFarm"> 0 </strong>
+        </p>
+        <p>ADC - Gold: <strong id="blueAdcGold"> 0 </strong> 
+            - Kills: <strong id="blueAdcKills"> 0 </strong>
+            - Deaths: <strong id="blueAdcDeaths"> 0 </strong> 
+            - Assists: <strong id="blueAdcAssists"> 0 </strong>
+            - Farm: <strong id="blueAdcFarm"> 0 </strong>
+        </p>
+        <p>Support - Gold: <strong id="blueSupportGold"> 0 </strong> 
+            - Kills: <strong id="blueSupportKills"> 0 </strong>
+            - Deaths: <strong id="blueSupportDeaths"> 0 </strong> 
+            - Assists: <strong id="blueSupportAssists"> 0 </strong>
+            - Farm: <strong id="blueSupportFarm"> 0 </strong>
+        </p>
 
-    <p>Blue team gold:<strong id="blueTeamGold"> 0 </strong></p>
+    </div>
 
+    <div id="redTeamStats">
+        <h2 id="redTeamHeader">Red Team Stats</h2>
+        <p>Gold:<strong id="redTeamGold"> 0 </strong></p>
+        <p>Kills:<strong id="redTeamKills"> 0 </strong></p>
+        <p>Dragons:<strong id="redTeamDragons"> 0 </strong></p>
+        <p>Towers:<strong id="redTeamTowers"> 0 </strong></p>
+        <p>Inhibitors:<strong id="redTeamInhib"> 0 </strong></p>
+        <p>Barons:<strong id="redTeamBarons"> 0 </strong></p>
+        <br><br>
+        <h3>Players Stats:</h3>
+        <p>Top Laner - Gold: <strong id="redTopLanerGold"> 0 </strong> 
+            - Kills: <strong id="redTopLanerKills"> 0 </strong>
+            - Deaths: <strong id="redTopLanerDeaths"> 0 </strong> 
+            - Assists: <strong id="redTopLanerAssists"> 0 </strong>
+            - Farm: <strong id="redTopLanerFarm"> 0 </strong>
+        </p>
+        <p>Jungle - Gold: <strong id="redJungleGold"> 0 </strong> 
+            - Kills: <strong id="redJungleKills"> 0 </strong>
+            - Deaths: <strong id="redJungleDeaths"> 0 </strong> 
+            - Assists: <strong id="redJungleAssists"> 0 </strong>
+            - Farm: <strong id="redJungleFarm"> 0 </strong>
+        </p>
+        <p>Mid Laner - Gold: <strong id="redMidLanerGold"> 0 </strong> 
+            - Kills: <strong id="redMidLanerKills"> 0 </strong>
+            - Deaths: <strong id="redMidLanerDeaths"> 0 </strong> 
+            - Assists: <strong id="redMidLanerAssists"> 0 </strong>
+            - Farm: <strong id="redMidLanerFarm"> 0 </strong>
+        </p>
+        <p>ADC - Gold: <strong id="redAdcGold"> 0 </strong> 
+            - Kills: <strong id="redAdcKills"> 0 </strong>
+            - Deaths: <strong id="redAdcDeaths"> 0 </strong> 
+            - Assists: <strong id="redAdcAssists"> 0 </strong>
+            - Farm: <strong id="redAdcFarm"> 0 </strong>
+        </p>
+        <p>Support - Gold: <strong id="redSupportGold"> 0 </strong> 
+            - Kills: <strong id="redSupportKills"> 0 </strong>
+            - Deaths: <strong id="redSupportDeaths"> 0 </strong> 
+            - Assists: <strong id="redSupportAssists"> 0 </strong>
+            - Farm: <strong id="redSupportFarm"> 0 </strong>
+        </p>
+
+    </div>
 
     <script>
         function startLiveUpdate() {
             const gameId = '105522984812784847';
-          //  let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
-            let startingTime = '2021-02-17T14:08:00Z'; 
+            //  let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
+            let startingTime = '2021-02-17T14:08:00Z';
             const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime=' + startingTime;
 
             var myInit = {
@@ -24,20 +107,192 @@
             };
 
             const blueTeamGold = document.getElementById('blueTeamGold');
+            const blueTeamKills = document.getElementById('blueTeamKills');
+            const blueTeamDragons = document.getElementById('blueTeamDragons');
+            const blueTeamTowers = document.getElementById('blueTeamTowers');
+            const blueTeamInhib = document.getElementById('blueTeamInhib');
+            const blueTeamBarons = document.getElementById('blueTeamBarons');
+
+            const redTeamGold = document.getElementById('redTeamGold');
+            const redTeamKills = document.getElementById('redTeamKills');
+            const redTeamDragons = document.getElementById('redTeamDragons');
+            const redTeamTowers = document.getElementById('redTeamTowers');
+            const redTeamInhib = document.getElementById('redTeamInhib');
+            const redTeamBarons = document.getElementById('redTeamBarons');
+
+            //blue top laner
+            const blueTopLanerGold = document.getElementById('blueTopLanerGold');
+            const blueTopLanerKills = document.getElementById('blueTopLanerKills');
+            const blueTopLanerDeaths = document.getElementById('blueTopLanerDeaths');
+            const blueTopLanerAssists = document.getElementById('blueTopLanerAssists');
+            const blueTopLanerFarm = document.getElementById('blueTopLanerFarm');
+
+            //blue jungle
+            const blueJungleGold = document.getElementById('blueJungleGold');
+            const blueJungleKills = document.getElementById('blueJungleKills');
+            const blueJungleDeaths = document.getElementById('blueJungleDeaths');
+            const blueJungleAssists = document.getElementById('blueJungleAssists');
+            const blueJungleFarm = document.getElementById('blueJungleFarm');
+
+            //blue mid laner
+            const blueMidLanerGold = document.getElementById('blueMidLanerGold');
+            const blueMidLanerKills = document.getElementById('blueMidLanerKills');
+            const blueMidLanerDeaths = document.getElementById('blueMidLanerDeaths');
+            const blueMidLanerAssists = document.getElementById('blueMidLanerAssists');
+            const blueMidLanerFarm = document.getElementById('blueMidLanerFarm');
+
+            //blue adc 
+            const blueAdcGold = document.getElementById('blueAdcGold');
+            const blueAdcKills = document.getElementById('blueAdcKills');
+            const blueAdcDeaths = document.getElementById('blueAdcDeaths');
+            const blueAdcAssists = document.getElementById('blueAdcAssists');
+            const blueAdcFarm = document.getElementById('blueAdcFarm');
+
+            //blue support
+            const blueSupportGold = document.getElementById('blueSupportGold');
+            const blueSupportKills = document.getElementById('blueSupportKills');
+            const blueSupportDeaths = document.getElementById('blueSupportDeaths');
+            const blueSupportAssists = document.getElementById('blueSupportAssists');
+            const blueSupportFarm = document.getElementById('blueSupportFarm');
+
+            // red team players
+            //red top laner
+            const redTopLanerGold = document.getElementById('redTopLanerGold');
+            const redTopLanerKills = document.getElementById('redTopLanerKills');
+            const redTopLanerDeaths = document.getElementById('redTopLanerDeaths');
+            const redTopLanerAssists = document.getElementById('redTopLanerAssists');
+            const redTopLanerFarm = document.getElementById('redTopLanerFarm');
+
+            //red jungle
+            const redJungleGold = document.getElementById('redJungleGold');
+            const redJungleKills = document.getElementById('redJungleKills');
+            const redJungleDeaths = document.getElementById('redJungleDeaths');
+            const redJungleAssists = document.getElementById('redJungleAssists');
+            const redJungleFarm = document.getElementById('redJungleFarm');
+
+            //red mid laner
+            const redMidLanerGold = document.getElementById('redMidLanerGold');
+            const redMidLanerKills = document.getElementById('redMidLanerKills');
+            const redMidLanerDeaths = document.getElementById('redMidLanerDeaths');
+            const redMidLanerAssists = document.getElementById('redMidLanerAssists');
+            const redMidLanerFarm = document.getElementById('redMidLanerFarm');
+
+            //red adc 
+            const redAdcGold = document.getElementById('redAdcGold');
+            const redAdcKills = document.getElementById('redAdcKills');
+            const redAdcDeaths = document.getElementById('redAdcDeaths');
+            const redAdcAssists = document.getElementById('redAdcAssists');
+            const redAdcFarm = document.getElementById('redAdcFarm');
+
+            //red support
+            const redSupportGold = document.getElementById('redSupportGold');
+            const redSupportKills = document.getElementById('redSupportKills');
+            const redSupportDeaths = document.getElementById('redSupportDeaths');
+            const redSupportAssists = document.getElementById('redSupportAssists');
+            const redSupportFarm = document.getElementById('redSupportFarm');
+
 
             setInterval(function () {
                 fetch(apiUrl, myInit)
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
-                        blueTeamGold.textContent = data.frames.pop().blueTeam.totalGold;
+                        // console.log(data);
+                        let lastFrame = data.frames.pop()
+
+                        //blue team
+                        blueTeamGold.textContent = lastFrame.blueTeam.totalGold;
+                        blueTeamKills.textContent = lastFrame.blueTeam.totalKills;
+                        blueTeamDragons.textContent = lastFrame.blueTeam.dragons.length;
+                        blueTeamTowers.textContent = lastFrame.blueTeam.towers
+                        blueTeamInhib.textContent = lastFrame.blueTeam.inhibitors
+                        blueTeamBarons.textContent = lastFrame.blueTeam.barons
+                        // red team
+                        redTeamGold.textContent = lastFrame.redTeam.totalGold;
+                        redTeamKills.textContent = lastFrame.redTeam.totalKills;
+                        redTeamDragons.textContent = lastFrame.redTeam.dragons.length;
+                        redTeamTowers.textContent = lastFrame.redTeam.towers
+                        redTeamInhib.textContent = lastFrame.redTeam.inhibitors
+                        redTeamBarons.textContent = lastFrame.redTeam.barons
+
+                        //players
+                        //blue top laner
+                        blueTopLanerGold.textContent = lastFrame.blueTeam.participants[0].totalGold
+                        blueTopLanerKills.textContent = lastFrame.blueTeam.participants[0].kills
+                        blueTopLanerDeaths.textContent = lastFrame.blueTeam.participants[0].deaths
+                        blueTopLanerAssists.textContent = lastFrame.blueTeam.participants[0].assists;
+                        blueTopLanerFarm.textContent = lastFrame.blueTeam.participants[0].creepScore
+
+                        //blue jungle
+                        blueJungleGold.textContent = lastFrame.blueTeam.participants[1].totalGold
+                        blueJungleKills.textContent = lastFrame.blueTeam.participants[1].kills
+                        blueJungleDeaths.textContent = lastFrame.blueTeam.participants[1].deaths
+                        blueJungleAssists.textContent = lastFrame.blueTeam.participants[1].assists;
+                        blueJungleFarm.textContent = lastFrame.blueTeam.participants[1].creepScore
+
+                        //blue mid laner
+                        blueMidLanerGold.textContent = lastFrame.blueTeam.participants[2].totalGold
+                        blueMidLanerKills.textContent = lastFrame.blueTeam.participants[2].kills
+                        blueMidLanerDeaths.textContent = lastFrame.blueTeam.participants[2].deaths
+                        blueMidLanerAssists.textContent = lastFrame.blueTeam.participants[2].assists;
+                        blueMidLanerFarm.textContent = lastFrame.blueTeam.participants[2].creepScore
+
+                        //blue adc 
+                        blueAdcGold.textContent = lastFrame.blueTeam.participants[3].totalGold
+                        blueAdcKills.textContent = lastFrame.blueTeam.participants[3].kills
+                        blueAdcDeaths.textContent = lastFrame.blueTeam.participants[3].deaths
+                        blueAdcAssists.textContent = lastFrame.blueTeam.participants[3].assists;
+                        blueAdcFarm.textContent = lastFrame.blueTeam.participants[3].creepScore
+
+                        //blue support 
+                        blueSupportGold.textContent = lastFrame.blueTeam.participants[4].totalGold
+                        blueSupportKills.textContent = lastFrame.blueTeam.participants[4].kills
+                        blueSupportDeaths.textContent = lastFrame.blueTeam.participants[4].deaths
+                        blueSupportAssists.textContent = lastFrame.blueTeam.participants[4].assists;
+                        blueSupportFarm.textContent = lastFrame.blueTeam.participants[4].creepScore
+
+                        //red top laner
+                        redTopLanerGold.textContent = lastFrame.redTeam.participants[0].totalGold
+                        redTopLanerKills.textContent = lastFrame.redTeam.participants[0].kills
+                        redTopLanerDeaths.textContent = lastFrame.redTeam.participants[0].deaths
+                        redTopLanerAssists.textContent = lastFrame.redTeam.participants[0].assists;
+                        redTopLanerFarm.textContent = lastFrame.redTeam.participants[0].creepScore
+
+                        //red jungle
+                        redJungleGold.textContent = lastFrame.redTeam.participants[1].totalGold
+                        redJungleKills.textContent = lastFrame.redTeam.participants[1].kills
+                        redJungleDeaths.textContent = lastFrame.redTeam.participants[1].deaths
+                        redJungleAssists.textContent = lastFrame.redTeam.participants[1].assists;
+                        redJungleFarm.textContent = lastFrame.redTeam.participants[1].creepScore
+
+                        //red mid laner
+                        redMidLanerGold.textContent = lastFrame.redTeam.participants[2].totalGold
+                        redMidLanerKills.textContent = lastFrame.redTeam.participants[2].kills
+                        redMidLanerDeaths.textContent = lastFrame.redTeam.participants[2].deaths
+                        redMidLanerAssists.textContent = lastFrame.redTeam.participants[2].assists;
+                        redMidLanerFarm.textContent = lastFrame.redTeam.participants[2].creepScore
+
+                        //red adc 
+                        redAdcGold.textContent = lastFrame.redTeam.participants[3].totalGold
+                        redAdcKills.textContent = lastFrame.redTeam.participants[3].kills
+                        redAdcDeaths.textContent = lastFrame.redTeam.participants[3].deaths
+                        redAdcAssists.textContent = lastFrame.redTeam.participants[3].assists;
+                        redAdcFarm.textContent = lastFrame.redTeam.participants[3].creepScore
+
+                        //red support 
+                        redSupportGold.textContent = lastFrame.redTeam.participants[4].totalGold
+                        redSupportKills.textContent = lastFrame.redTeam.participants[4].kills
+                        redSupportDeaths.textContent = lastFrame.redTeam.participants[4].deaths
+                        redSupportAssists.textContent = lastFrame.redTeam.participants[4].assists;
+                        redSupportFarm.textContent = lastFrame.redTeam.participants[4].creepScore
+
+
                     }).catch(error => {
                         console.log(error);
                     })
 
 
 
-            }, 5000);
+            }, 2000);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
