@@ -96,11 +96,10 @@
 
     <script>
         function startLiveUpdate() {
-            const gameId = '105522984812784847';
-            //  let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
-            let startingTime = '2021-02-17T14:08:00Z';
-            const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime=' + startingTime;
-
+            const gameId = '105562692794240105';
+            let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
+            //let startingTime = '2021-02-17T14:08:00Z';
+            const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime='+ startingTime;
             var myInit = {
                 method: 'GET',
                 headers: { 'x-api-key': '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z' }
@@ -192,118 +191,113 @@
             const redSupportFarm = document.getElementById('redSupportFarm');
 
 
-            setInterval(function () {
-                fetch(apiUrl, myInit)
-                    .then(res => res.json())
-                    .then(data => {
-                        // console.log(data);
-                        let lastFrame = data.frames.pop()
+            fetch(apiUrl, myInit)
+                .then(res => res.json())
+                .then(data => {
+                    // console.log(data);
+                    console.log(startingTime);
+                    if (data.frames==null) return ;
+                    let lastFrame = data.frames.pop()
 
-                        //blue team
-                        blueTeamGold.textContent = lastFrame.blueTeam.totalGold;
-                        blueTeamKills.textContent = lastFrame.blueTeam.totalKills;
-                        blueTeamDragons.textContent = lastFrame.blueTeam.dragons.length;
-                        blueTeamTowers.textContent = lastFrame.blueTeam.towers
-                        blueTeamInhib.textContent = lastFrame.blueTeam.inhibitors
-                        blueTeamBarons.textContent = lastFrame.blueTeam.barons
-                        // red team
-                        redTeamGold.textContent = lastFrame.redTeam.totalGold;
-                        redTeamKills.textContent = lastFrame.redTeam.totalKills;
-                        redTeamDragons.textContent = lastFrame.redTeam.dragons.length;
-                        redTeamTowers.textContent = lastFrame.redTeam.towers
-                        redTeamInhib.textContent = lastFrame.redTeam.inhibitors
-                        redTeamBarons.textContent = lastFrame.redTeam.barons
+                    //blue team
+                    blueTeamGold.textContent = lastFrame.blueTeam.totalGold;
+                    blueTeamKills.textContent = lastFrame.blueTeam.totalKills;
+                    blueTeamDragons.textContent = lastFrame.blueTeam.dragons.length;
+                    blueTeamTowers.textContent = lastFrame.blueTeam.towers
+                    blueTeamInhib.textContent = lastFrame.blueTeam.inhibitors
+                    blueTeamBarons.textContent = lastFrame.blueTeam.barons
+                    // red team
+                    redTeamGold.textContent = lastFrame.redTeam.totalGold;
+                    redTeamKills.textContent = lastFrame.redTeam.totalKills;
+                    redTeamDragons.textContent = lastFrame.redTeam.dragons.length;
+                    redTeamTowers.textContent = lastFrame.redTeam.towers
+                    redTeamInhib.textContent = lastFrame.redTeam.inhibitors
+                    redTeamBarons.textContent = lastFrame.redTeam.barons
 
-                        //players
-                        //blue top laner
-                        blueTopLanerGold.textContent = lastFrame.blueTeam.participants[0].totalGold
-                        blueTopLanerKills.textContent = lastFrame.blueTeam.participants[0].kills
-                        blueTopLanerDeaths.textContent = lastFrame.blueTeam.participants[0].deaths
-                        blueTopLanerAssists.textContent = lastFrame.blueTeam.participants[0].assists;
-                        blueTopLanerFarm.textContent = lastFrame.blueTeam.participants[0].creepScore
+                    //players
+                    //blue top laner
+                    blueTopLanerGold.textContent = lastFrame.blueTeam.participants[0].totalGold
+                    blueTopLanerKills.textContent = lastFrame.blueTeam.participants[0].kills
+                    blueTopLanerDeaths.textContent = lastFrame.blueTeam.participants[0].deaths
+                    blueTopLanerAssists.textContent = lastFrame.blueTeam.participants[0].assists;
+                    blueTopLanerFarm.textContent = lastFrame.blueTeam.participants[0].creepScore
 
-                        //blue jungle
-                        blueJungleGold.textContent = lastFrame.blueTeam.participants[1].totalGold
-                        blueJungleKills.textContent = lastFrame.blueTeam.participants[1].kills
-                        blueJungleDeaths.textContent = lastFrame.blueTeam.participants[1].deaths
-                        blueJungleAssists.textContent = lastFrame.blueTeam.participants[1].assists;
-                        blueJungleFarm.textContent = lastFrame.blueTeam.participants[1].creepScore
+                    //blue jungle
+                    blueJungleGold.textContent = lastFrame.blueTeam.participants[1].totalGold
+                    blueJungleKills.textContent = lastFrame.blueTeam.participants[1].kills
+                    blueJungleDeaths.textContent = lastFrame.blueTeam.participants[1].deaths
+                    blueJungleAssists.textContent = lastFrame.blueTeam.participants[1].assists;
+                    blueJungleFarm.textContent = lastFrame.blueTeam.participants[1].creepScore
 
-                        //blue mid laner
-                        blueMidLanerGold.textContent = lastFrame.blueTeam.participants[2].totalGold
-                        blueMidLanerKills.textContent = lastFrame.blueTeam.participants[2].kills
-                        blueMidLanerDeaths.textContent = lastFrame.blueTeam.participants[2].deaths
-                        blueMidLanerAssists.textContent = lastFrame.blueTeam.participants[2].assists;
-                        blueMidLanerFarm.textContent = lastFrame.blueTeam.participants[2].creepScore
+                    //blue mid laner
+                    blueMidLanerGold.textContent = lastFrame.blueTeam.participants[2].totalGold
+                    blueMidLanerKills.textContent = lastFrame.blueTeam.participants[2].kills
+                    blueMidLanerDeaths.textContent = lastFrame.blueTeam.participants[2].deaths
+                    blueMidLanerAssists.textContent = lastFrame.blueTeam.participants[2].assists;
+                    blueMidLanerFarm.textContent = lastFrame.blueTeam.participants[2].creepScore
 
-                        //blue adc 
-                        blueAdcGold.textContent = lastFrame.blueTeam.participants[3].totalGold
-                        blueAdcKills.textContent = lastFrame.blueTeam.participants[3].kills
-                        blueAdcDeaths.textContent = lastFrame.blueTeam.participants[3].deaths
-                        blueAdcAssists.textContent = lastFrame.blueTeam.participants[3].assists;
-                        blueAdcFarm.textContent = lastFrame.blueTeam.participants[3].creepScore
+                    //blue adc 
+                    blueAdcGold.textContent = lastFrame.blueTeam.participants[3].totalGold
+                    blueAdcKills.textContent = lastFrame.blueTeam.participants[3].kills
+                    blueAdcDeaths.textContent = lastFrame.blueTeam.participants[3].deaths
+                    blueAdcAssists.textContent = lastFrame.blueTeam.participants[3].assists;
+                    blueAdcFarm.textContent = lastFrame.blueTeam.participants[3].creepScore
 
-                        //blue support 
-                        blueSupportGold.textContent = lastFrame.blueTeam.participants[4].totalGold
-                        blueSupportKills.textContent = lastFrame.blueTeam.participants[4].kills
-                        blueSupportDeaths.textContent = lastFrame.blueTeam.participants[4].deaths
-                        blueSupportAssists.textContent = lastFrame.blueTeam.participants[4].assists;
-                        blueSupportFarm.textContent = lastFrame.blueTeam.participants[4].creepScore
+                    //blue support 
+                    blueSupportGold.textContent = lastFrame.blueTeam.participants[4].totalGold
+                    blueSupportKills.textContent = lastFrame.blueTeam.participants[4].kills
+                    blueSupportDeaths.textContent = lastFrame.blueTeam.participants[4].deaths
+                    blueSupportAssists.textContent = lastFrame.blueTeam.participants[4].assists;
+                    blueSupportFarm.textContent = lastFrame.blueTeam.participants[4].creepScore
 
-                        //red top laner
-                        redTopLanerGold.textContent = lastFrame.redTeam.participants[0].totalGold
-                        redTopLanerKills.textContent = lastFrame.redTeam.participants[0].kills
-                        redTopLanerDeaths.textContent = lastFrame.redTeam.participants[0].deaths
-                        redTopLanerAssists.textContent = lastFrame.redTeam.participants[0].assists;
-                        redTopLanerFarm.textContent = lastFrame.redTeam.participants[0].creepScore
+                    //red top laner
+                    redTopLanerGold.textContent = lastFrame.redTeam.participants[0].totalGold
+                    redTopLanerKills.textContent = lastFrame.redTeam.participants[0].kills
+                    redTopLanerDeaths.textContent = lastFrame.redTeam.participants[0].deaths
+                    redTopLanerAssists.textContent = lastFrame.redTeam.participants[0].assists;
+                    redTopLanerFarm.textContent = lastFrame.redTeam.participants[0].creepScore
 
-                        //red jungle
-                        redJungleGold.textContent = lastFrame.redTeam.participants[1].totalGold
-                        redJungleKills.textContent = lastFrame.redTeam.participants[1].kills
-                        redJungleDeaths.textContent = lastFrame.redTeam.participants[1].deaths
-                        redJungleAssists.textContent = lastFrame.redTeam.participants[1].assists;
-                        redJungleFarm.textContent = lastFrame.redTeam.participants[1].creepScore
+                    //red jungle
+                    redJungleGold.textContent = lastFrame.redTeam.participants[1].totalGold
+                    redJungleKills.textContent = lastFrame.redTeam.participants[1].kills
+                    redJungleDeaths.textContent = lastFrame.redTeam.participants[1].deaths
+                    redJungleAssists.textContent = lastFrame.redTeam.participants[1].assists;
+                    redJungleFarm.textContent = lastFrame.redTeam.participants[1].creepScore
 
-                        //red mid laner
-                        redMidLanerGold.textContent = lastFrame.redTeam.participants[2].totalGold
-                        redMidLanerKills.textContent = lastFrame.redTeam.participants[2].kills
-                        redMidLanerDeaths.textContent = lastFrame.redTeam.participants[2].deaths
-                        redMidLanerAssists.textContent = lastFrame.redTeam.participants[2].assists;
-                        redMidLanerFarm.textContent = lastFrame.redTeam.participants[2].creepScore
+                    //red mid laner
+                    redMidLanerGold.textContent = lastFrame.redTeam.participants[2].totalGold
+                    redMidLanerKills.textContent = lastFrame.redTeam.participants[2].kills
+                    redMidLanerDeaths.textContent = lastFrame.redTeam.participants[2].deaths
+                    redMidLanerAssists.textContent = lastFrame.redTeam.participants[2].assists;
+                    redMidLanerFarm.textContent = lastFrame.redTeam.participants[2].creepScore
 
-                        //red adc 
-                        redAdcGold.textContent = lastFrame.redTeam.participants[3].totalGold
-                        redAdcKills.textContent = lastFrame.redTeam.participants[3].kills
-                        redAdcDeaths.textContent = lastFrame.redTeam.participants[3].deaths
-                        redAdcAssists.textContent = lastFrame.redTeam.participants[3].assists;
-                        redAdcFarm.textContent = lastFrame.redTeam.participants[3].creepScore
+                    //red adc 
+                    redAdcGold.textContent = lastFrame.redTeam.participants[3].totalGold
+                    redAdcKills.textContent = lastFrame.redTeam.participants[3].kills
+                    redAdcDeaths.textContent = lastFrame.redTeam.participants[3].deaths
+                    redAdcAssists.textContent = lastFrame.redTeam.participants[3].assists;
+                    redAdcFarm.textContent = lastFrame.redTeam.participants[3].creepScore
 
-                        //red support 
-                        redSupportGold.textContent = lastFrame.redTeam.participants[4].totalGold
-                        redSupportKills.textContent = lastFrame.redTeam.participants[4].kills
-                        redSupportDeaths.textContent = lastFrame.redTeam.participants[4].deaths
-                        redSupportAssists.textContent = lastFrame.redTeam.participants[4].assists;
-                        redSupportFarm.textContent = lastFrame.redTeam.participants[4].creepScore
-
-
-                    }).catch(error => {
-                        console.log(error);
-                    })
+                    //red support 
+                    redSupportGold.textContent = lastFrame.redTeam.participants[4].totalGold
+                    redSupportKills.textContent = lastFrame.redTeam.participants[4].kills
+                    redSupportDeaths.textContent = lastFrame.redTeam.participants[4].deaths
+                    redSupportAssists.textContent = lastFrame.redTeam.participants[4].assists;
+                    redSupportFarm.textContent = lastFrame.redTeam.participants[4].creepScore
 
 
-
-            }, 2000);
+                }).catch(error => {
+                    console.log(error);
+                })
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            startLiveUpdate();
-        })
+        setInterval(startLiveUpdate,1000);
 
 
         let getRoundedDate = (seconds, d = new Date()) => {
 
             let ms = 1000 * seconds; // convert minutes to ms
-            let roundedDate = new Date(Math.round((d.getTime()) / ms) * ms - 10000);
+            let roundedDate = new Date(Math.round((d.getTime()-25000) / ms) * ms);
 
             return roundedDate
         }
