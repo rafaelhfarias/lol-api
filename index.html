@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>League of Legends API</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1>League of Legends API</h1>
+
+    <p>Blue team gold:<strong id="blueTeamGold"> 0 </strong></p>
+
+
+    <script>
+        function startLiveUpdate() {
+            const gameId = '105522984812784847';
+          //  let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
+            let startingTime = '2021-02-17T14:08:00Z'; 
+            const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime=' + startingTime;
+
+            var myInit = {
+                method: 'GET',
+                headers: { 'x-api-key': '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z' }
+            };
+
+            const blueTeamGold = document.getElementById('blueTeamGold');
+
+            setInterval(function () {
+                fetch(apiUrl, myInit)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        blueTeamGold.textContent = data.frames.pop().blueTeam.totalGold;
+                    }).catch(error => {
+                        console.log(error);
+                    })
+
+
+
+            }, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            startLiveUpdate();
+        })
+
+
+        let getRoundedDate = (seconds, d = new Date()) => {
+
+            let ms = 1000 * seconds; // convert minutes to ms
+            let roundedDate = new Date(Math.round((d.getTime()) / ms) * ms - 10000);
+
+            return roundedDate
+        }
+
+    </script>
+
+</body>
+
+</html>
