@@ -9,88 +9,166 @@
 <body>
     <h1 id="lolApi">League of Legends API</h1>
     <div id="blueTeamStats">
+       
         <h2 id="blueTeamHeader">Blue Team Stats</h2>
-        <p>Gold:<strong id="blueTeamGold"> 0 </strong></p>
-        <p>Kills:<strong id="blueTeamKills"> 0 </strong></p>
-        <p>Dragons:<strong id="blueTeamDragons"> 0 </strong></p>
-        <p>Towers:<strong id="blueTeamTowers"> 0 </strong></p>
-        <p>Inhibitors:<strong id="blueTeamInhib"> 0 </strong></p>
-        <p>Barons:<strong id="blueTeamBarons"> 0 </strong></p>
+        <table>
+            <tr>
+                <th>Gold</th>
+                <th>Kills</th>
+                <th>Dragons</th>
+                <th>Torres</th>
+                <th>Inibidores</th>
+                <th>Baron</th>
+            </tr>
+            <tr>
+                <td><strong id="blueTeamGold"> 0 </strong></td>
+                <td><strong id="blueTeamKills"> 0 </strong></td>
+                <td><strong id="blueTeamDragons"> 0 </strong></td>
+                <td><strong id="blueTeamTowers"> 0 </strong></td>
+                <td><strong id="blueTeamInhib"> 0 </strong></td>
+                <td><strong id="blueTeamBarons"> 0 </strong> </td>
+            </tr>
+        </table>
+
         <br><br>
         <h3>Players Stats:</h3>
-        <p>Top Laner - Gold: <strong id="blueTopLanerGold"> 0 </strong> 
-            - Kills: <strong id="blueTopLanerKills"> 0 </strong>
-            - Deaths: <strong id="blueTopLanerDeaths"> 0 </strong> 
-            - Assists: <strong id="blueTopLanerAssists"> 0 </strong>
-            - Farm: <strong id="blueTopLanerFarm"> 0 </strong>
-        </p>
-        <p>Jungle - Gold: <strong id="blueJungleGold"> 0 </strong> 
-            - Kills: <strong id="blueJungleKills"> 0 </strong>
-            - Deaths: <strong id="blueJungleDeaths"> 0 </strong> 
-            - Assists: <strong id="blueJungleAssists"> 0 </strong>
-            - Farm: <strong id="blueJungleFarm"> 0 </strong>
-        </p>
-        <p>Mid Laner - Gold: <strong id="blueMidLanerGold"> 0 </strong> 
-            - Kills: <strong id="blueMidLanerKills"> 0 </strong>
-            - Deaths: <strong id="blueMidLanerDeaths"> 0 </strong> 
-            - Assists: <strong id="blueMidLanerAssists"> 0 </strong>
-            - Farm: <strong id="blueMidLanerFarm"> 0 </strong>
-        </p>
-        <p>ADC - Gold: <strong id="blueAdcGold"> 0 </strong> 
-            - Kills: <strong id="blueAdcKills"> 0 </strong>
-            - Deaths: <strong id="blueAdcDeaths"> 0 </strong> 
-            - Assists: <strong id="blueAdcAssists"> 0 </strong>
-            - Farm: <strong id="blueAdcFarm"> 0 </strong>
-        </p>
-        <p>Support - Gold: <strong id="blueSupportGold"> 0 </strong> 
-            - Kills: <strong id="blueSupportKills"> 0 </strong>
-            - Deaths: <strong id="blueSupportDeaths"> 0 </strong> 
-            - Assists: <strong id="blueSupportAssists"> 0 </strong>
-            - Farm: <strong id="blueSupportFarm"> 0 </strong>
-        </p>
+        <table>
+            <tr>
+                <th>Lane</th>
+                <th>Gold</th>
+                <th>Kills</th>
+                <th>Deaths</th>
+                <th>Assists</th>
+                <th>Farm</th>
+            </tr>
+            <tr>
+                <td>Top</td>
+                <td><strong id="blueTopLanerGold"> 0 </strong></td>
+                <td><strong id="blueTopLanerKills"> 0 </strong></td>
+                <td><strong id="blueTopLanerDeaths"> 0 </strong></td>
+                <td><strong id="blueTopLanerAssists"> 0 </strong></td>
+                <td><strong id="blueTopLanerFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Jungle</td>
+                <td><strong id="blueJungleGold"> 0 </strong></td>
+                <td><strong id="blueJungleKills"> 0 </strong></td>
+                <td><strong id="blueJungleDeaths"> 0 </strong></td>
+                <td><strong id="blueJungleAssists"> 0 </strong></td>
+                <td><strong id="blueJungleFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Mid</td>
+                <td><strong id="blueMidLanerGold"> 0 </strong></td>
+                <td><strong id="blueMidLanerKills"> 0 </strong></td>
+                <td><strong id="blueMidLanerDeaths"> 0 </strong></td>
+                <td><strong id="blueMidLanerAssists"> 0 </strong></td>
+                <td><strong id="blueMidLanerFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>ADC</td>
+                <td><strong id="blueAdcGold"> 0 </strong></td>
+                <td><strong id="blueAdcKills"> 0 </strong></td>
+                <td><strong id="blueAdcDeaths"> 0 </strong></td>
+                <td><strong id="blueAdcAssists"> 0 </strong></td>
+                <td><strong id="blueAdcFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Support</td>
+                <td><strong id="blueSupportGold"> 0 </strong></td>
+                <td><strong id="blueSupportKills"> 0 </strong></td>
+                <td><strong id="blueSupportDeaths"> 0 </strong></td>
+                <td><strong id="blueSupportAssists"> 0 </strong></td>
+                <td><strong id="blueSupportFarm"> 0 </strong></td>
+            </tr>
+            
+            
+        </table>
 
     </div>
 
     <div id="redTeamStats">
         <h2 id="redTeamHeader">Red Team Stats</h2>
-        <p>Gold:<strong id="redTeamGold"> 0 </strong></p>
-        <p>Kills:<strong id="redTeamKills"> 0 </strong></p>
-        <p>Dragons:<strong id="redTeamDragons"> 0 </strong></p>
-        <p>Towers:<strong id="redTeamTowers"> 0 </strong></p>
-        <p>Inhibitors:<strong id="redTeamInhib"> 0 </strong></p>
-        <p>Barons:<strong id="redTeamBarons"> 0 </strong></p>
+        <table>
+            <tr>
+                <th>Gold</th>
+                <th>Kills</th>
+                <th>Dragons</th>
+                <th>Torres</th>
+                <th>Inibidores</th>
+                <th>Baron</th>
+            </tr>
+            <tr>
+                <td><strong id="redTeamGold"> 0 </strong></td>
+                <td><strong id="redTeamKills"> 0 </strong></td>
+                <td><strong id="redTeamDragons"> 0 </strong></td>
+                <td><strong id="redTeamTowers"> 0 </strong></td>
+                <td><strong id="redTeamInhib"> 0 </strong></td>
+                <td><strong id="redTeamBarons"> 0 </strong> </td>
+            </tr>
+        </table>
         <br><br>
         <h3>Players Stats:</h3>
-        <p>Top Laner - Gold: <strong id="redTopLanerGold"> 0 </strong> 
-            - Kills: <strong id="redTopLanerKills"> 0 </strong>
-            - Deaths: <strong id="redTopLanerDeaths"> 0 </strong> 
-            - Assists: <strong id="redTopLanerAssists"> 0 </strong>
-            - Farm: <strong id="redTopLanerFarm"> 0 </strong>
-        </p>
-        <p>Jungle - Gold: <strong id="redJungleGold"> 0 </strong> 
-            - Kills: <strong id="redJungleKills"> 0 </strong>
-            - Deaths: <strong id="redJungleDeaths"> 0 </strong> 
-            - Assists: <strong id="redJungleAssists"> 0 </strong>
-            - Farm: <strong id="redJungleFarm"> 0 </strong>
-        </p>
-        <p>Mid Laner - Gold: <strong id="redMidLanerGold"> 0 </strong> 
-            - Kills: <strong id="redMidLanerKills"> 0 </strong>
-            - Deaths: <strong id="redMidLanerDeaths"> 0 </strong> 
-            - Assists: <strong id="redMidLanerAssists"> 0 </strong>
-            - Farm: <strong id="redMidLanerFarm"> 0 </strong>
-        </p>
-        <p>ADC - Gold: <strong id="redAdcGold"> 0 </strong> 
-            - Kills: <strong id="redAdcKills"> 0 </strong>
-            - Deaths: <strong id="redAdcDeaths"> 0 </strong> 
-            - Assists: <strong id="redAdcAssists"> 0 </strong>
-            - Farm: <strong id="redAdcFarm"> 0 </strong>
-        </p>
-        <p>Support - Gold: <strong id="redSupportGold"> 0 </strong> 
-            - Kills: <strong id="redSupportKills"> 0 </strong>
-            - Deaths: <strong id="redSupportDeaths"> 0 </strong> 
-            - Assists: <strong id="redSupportAssists"> 0 </strong>
-            - Farm: <strong id="redSupportFarm"> 0 </strong>
-        </p>
+        <table>
+            <tr>
+                <th>Lane</th>
+                <th>Gold</th>
+                <th>Kills</th>
+                <th>Deaths</th>
+                <th>Assists</th>
+                <th>Farm</th>
+            </tr>
+            <tr>
+                <td>Top</td>
+                <td><strong id="redTopLanerGold"> 0 </strong></td>
+                <td><strong id="redTopLanerKills"> 0 </strong></td>
+                <td><strong id="redTopLanerDeaths"> 0 </strong></td>
+                <td><strong id="redTopLanerAssists"> 0 </strong></td>
+                <td><strong id="redTopLanerFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Jungle</td>
+                <td><strong id="redJungleGold"> 0 </strong></td>
+                <td><strong id="redJungleKills"> 0 </strong></td>
+                <td><strong id="redJungleDeaths"> 0 </strong></td>
+                <td><strong id="redJungleAssists"> 0 </strong></td>
+                <td><strong id="redJungleFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Mid</td>
+                <td><strong id="redMidLanerGold"> 0 </strong></td>
+                <td><strong id="redMidLanerKills"> 0 </strong></td>
+                <td><strong id="redMidLanerDeaths"> 0 </strong></td>
+                <td><strong id="redMidLanerAssists"> 0 </strong></td>
+                <td><strong id="redMidLanerFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>ADC</td>
+                <td><strong id="redAdcGold"> 0 </strong></td>
+                <td><strong id="redAdcKills"> 0 </strong></td>
+                <td><strong id="redAdcDeaths"> 0 </strong></td>
+                <td><strong id="redAdcAssists"> 0 </strong></td>
+                <td><strong id="redAdcFarm"> 0 </strong></td>
+            </tr>
+            
+            <tr>
+                <td>Support</td>
+                <td><strong id="redSupportGold"> 0 </strong></td>
+                <td><strong id="redSupportKills"> 0 </strong></td>
+                <td><strong id="redSupportDeaths"> 0 </strong></td>
+                <td><strong id="redSupportAssists"> 0 </strong></td>
+                <td><strong id="redSupportFarm"> 0 </strong></td>
+            </tr>
+            
+            
+        </table>
 
     </div>
 
@@ -99,7 +177,7 @@
             const gameId = '105562692794240171';
             let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
             //let startingTime = '2021-02-17T14:08:00Z';
-            const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime='+ startingTime;
+            const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime=' + startingTime;
             var myInit = {
                 method: 'GET',
                 headers: { 'x-api-key': '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z' }
@@ -196,7 +274,7 @@
                 .then(data => {
                     // console.log(data);
                     console.log(startingTime);
-                    if (data.frames==null) return ;
+                    if (data.frames == null) return;
                     let lastFrame = data.frames.pop()
 
                     //blue team
@@ -291,13 +369,13 @@
                 })
         }
 
-        setInterval(startLiveUpdate,1000);
+        setInterval(startLiveUpdate, 1000);
 
 
         let getRoundedDate = (seconds, d = new Date()) => {
 
             let ms = 1000 * seconds; // convert minutes to ms
-            let roundedDate = new Date(Math.round((d.getTime()-26000) / ms) * ms);
+            let roundedDate = new Date(Math.round((d.getTime() - 26000) / ms) * ms);
 
             return roundedDate
         }
