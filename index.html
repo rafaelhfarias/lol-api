@@ -96,7 +96,7 @@
 
     <script>
         function startLiveUpdate() {
-            const gameId = '105562692794240105';
+            const gameId = '105562692794240171';
             let startingTime = getRoundedDate(10).toISOString(); // '2021-02-17T14:08:00Z'
             //let startingTime = '2021-02-17T14:08:00Z';
             const apiUrl = 'https://feed.lolesports.com/livestats/v1/window/' + gameId + '?startingTime='+ startingTime;
@@ -297,7 +297,7 @@
         let getRoundedDate = (seconds, d = new Date()) => {
 
             let ms = 1000 * seconds; // convert minutes to ms
-            let roundedDate = new Date(Math.round((d.getTime()-25000) / ms) * ms);
+            let roundedDate = new Date(Math.round((d.getTime()-26000) / ms) * ms);
 
             return roundedDate
         }
